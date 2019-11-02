@@ -2,6 +2,30 @@ import wx
 
 box_width = 400
 
+
+## To Do:
+#
+# To get to a basically working app, we need to
+# - get the browse button working (onBrowse):
+#    - open a browse dialog
+#    - get the chosen folder
+# - make the save button work (onSave):
+#    - get the data from the data box where it is pasted
+#    - find the next filename:
+#        - read the base name from the textctrl
+#        - search for base name + "_001.csv", "_002.csv", ...
+#        - stop when we find the first one that doesn't exist yet and use that
+#    - open the file
+#    - write the data
+#    - close the file
+
+# Advance features:
+#
+# Idealy,
+#
+# - folder path should save and be read when the app first opens
+# - base name should also save and be read
+
 class Mywin(wx.Frame): 
     def __init__(self, parent, title): 
         super(Mywin, self).__init__(parent, title = title,size = (600,400))
@@ -103,6 +127,8 @@ class Mywin(wx.Frame):
     def onBrowse(self, event):
         print("this is what I would do to browse for the folder to save the data in...")
         print("...someone should write this function")
+        ## when the browse button is pushed, a folder dialog browser should open
+        ## to let the user choose the data folder (and possibly create a new folder)
 
         
     def OnKeyTyped(self, event): 
